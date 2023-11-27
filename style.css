@@ -1,0 +1,215 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: #071339;
+}
+
+.progress-indicator {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.progress-indicator li {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #3498db;
+    border-radius: 50%;
+    margin: 0 10px;
+    background-color: #fff;
+}
+
+.progress-indicator li.active {
+    background-color: #3498db;
+}
+
+.progress-indicator li.inactive {
+    background-color: #d4e6f1;
+}
+
+.step {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.step.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.prev{
+    border-radius: 16px;
+    border: 0.5px solid #FFF;
+    background: rgba(0, 227, 255, 0.00);
+}
+
+.next{
+    border-radius: 16px;
+    background: rgba(0, 227, 255, 0.60);
+    border: none;
+}
+
+label{
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.checkboxes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.checkboxes input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #071339;
+    appearance: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.checkboxes input[type="radio"]:checked {
+    background-image: url("https://midiaideal.digital/mountpay/wp-content/uploads/2023/11/iconecheckv2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
+    background-color: #071339;
+}
+
+.pergunta{
+    color: #FFF;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.nomeDigitado {
+    color: #00E3FF;
+    font-weight: 300;
+}
+
+.input{
+    border:none;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.30);
+}
+
+.input::placeholder{
+    color:#FFF;
+}
+
+.acoes{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.campos{
+    display:flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* .etapa {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+} */
+
+.resultados{
+    display: grid;
+    place-items: center;
+    background: #FFF;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.resultados h3{
+    color: #071339;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.plano{
+    border-radius: 32px;
+    background: #FBFBFB;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 80%;
+    padding: 0;
+    gap: 0;
+}
+
+.tituloPlano{
+    height: 6rem;
+    font-size: 1rem;
+    color: #FFF;
+    display: grid;
+    place-items: center;
+    border-radius: 29px;
+}
+
+ul li{
+    color: #071339;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.precos{
+    gap: 1rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.precos .col-5{
+    border-radius: 0.5rem;
+    text-align: center;
+    color: #FFF;
+    gap: 0;
+}
+
+.txPequeno{
+    font-size: 0.5rem;
+}
+.valor{
+    font-size: 2rem;
+}
+
+
+.popClinics{
+    background: #798FC2; 
+}
+
+.infoPlanos{
+    background: #FFF;
+    padding: 3rem;
+    border-radius: 32px;
+}
+
+.popClinics {
+    border: 2px solid #798FC2;
+}
+
