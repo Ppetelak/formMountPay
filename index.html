@@ -9,13 +9,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
     <title>Formulário Multistep</title>
 
 </head>
 
-<body>
+<body class="bodyForm">
 
     <div class="container mt-5">
+        <div class="d-flex flex-column align-items-end tituloInicial">
+            <div class="col-3">
+                <div class="d-flex flex-column align-items-center">
+                    <img src="./img/iconeencontreseubeneficio.png" class="mb-2">
+                    <p class="text-center tituloForm">Encontre o <span>Benefício <br> Saúde </span> ideal</p>
+                </div>
+            </div>
+        </div>
         <ul class="progress-indicator">
             <li class="active"></li>
             <li class="inactive"></li>
@@ -66,22 +75,38 @@
                     <label class="pergunta" for="campo2">Você dirige <span class="nomeDigitado"></span>?</label>
                     <div class="checkboxes">
                         <div class="form-check form-check-inline col-3">
-                            <input class="form-check-input" type="radio" name="pergunta3" id="opcao1" value="Sim"
+                            <input class="form-check-input" type="radio" name="pergunta3" id="opcao1" value="Sim, apenas para tarefas pessoais"
                                 required>
                             <label class="form-check-label" for="opcao1">Sim, apenas para tarefas pessoais</label>
                         </div>
                         <div class="form-check form-check-inline col-3">
                             <input class="form-check-input" type="radio" name="pergunta3" id="opcao2"
-                                value="Sim e trabalho">
+                                value="Sim, e trabalho dirigindo">
                             <label class="form-check-label" for="opcao2">Sim, e trabalho dirigindo</label>
                         </div>
                         <div class="form-check form-check-inline col-3">
-                            <input class="form-check-input" type="radio" name="pergunta3" id="opcao3" value="Não">
+                            <input class="form-check-input" type="radio" name="pergunta3" id="opcao3" value="Não dirijo">
                             <label class="form-check-label" for="opcao2">Não dirijo</label>
                         </div>
                     </div>
                 </div>
-                <div class="acoes">
+
+                <div class="mb-3 campos" id="opcoesDirigindo" style="display: none;">
+                    <!-- Novas opções para quem trabalha dirigindo -->
+                    <label class="pergunta mb-3">Você trabalha dirigindo com:</label>
+                    <div class="checkboxes">
+                        <div class="form-check form-check-inline col-6">
+                            <input class="form-check-input" type="radio" name="perguntaDirigindo" id="opcaoDirigindo1" value="Carro ou Moto">
+                            <label class="form-check-label" for="opcaoDirigindo1">Carro ou Moto</label>
+                        </div>
+                        <div class="form-check form-check-inline col-6">
+                            <input class="form-check-input" type="radio" name="perguntaDirigindo" id="opcaoDirigindo1" value="Caminhão">
+                            <label class="form-check-label" for="opcaoDirigindo1">Caminhão</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="acoes mt-3">
                     <button class="btn btn-secondary prev" type="button" onclick="prevStep(3)">VOLTAR</button>
                     <button class="btn btn-primary next" type="button" onclick="nextStep(3)">CONTINUAR</button>
                 </div>
@@ -92,13 +117,13 @@
                     <label class="pergunta" for="campo2"><span class="nomeDigitado"></span>, você é casado?</label>
                     <div class="checkboxes">
                         <div class="form-check form-check-inline col-3">
-                            <input class="form-check-input" type="radio" name="pergunta4" id="opcao1" value="Não"
+                            <input class="form-check-input" type="radio" name="pergunta4" id="opcao1" value="Não sou casado"
                                 required>
                             <label class="form-check-label" for="opcao1">Não sou casado</label>
                         </div>
                         <div class="form-check form-check-inline col-3">
                             <input class="form-check-input" type="radio" name="pergunta4" id="opcao2"
-                                value="Sou casado mas só pra mim">
+                                value="Sou casado mas quero um Plano só para mim">
                             <label class="form-check-label" for="opcao2">Sou casado mas quero um Plano só para mim</label>
                         </div>
                         <div class="form-check form-check-inline col-3">
@@ -118,39 +143,36 @@
                     <label class="pergunta" for="campo2"><span class="nomeDigitado"></span>, Você tem filhos ou dependentes?</label>
                     <div class="checkboxes">
                         <div class="form-check form-check-inline col-3">
-                            <input class="form-check-input" type="radio" name="pergunta5" id="opcao1" value="Sim, pra familia"
+                            <input class="form-check-input" type="radio" name="pergunta5" id="opcao1" value="Sim, e quero um Plano para a família"
                                 required>
                             <label class="form-check-label" for="opcao1">Sim, e quero um Plano para a família</label>
                         </div>
                         <div class="form-check form-check-inline col-3">
                             <input class="form-check-input" type="radio" name="pergunta5" id="opcao2"
-                                value="Sim, mas só pra mim">
+                                value="Sim, mas quero um Plano só para mim">
                             <label class="form-check-label" for="opcao2">Sim, mas quero um Plano só para mim</label>
                         </div>
                         <div class="form-check form-check-inline col-3">
-                            <input class="form-check-input" type="radio" name="pergunta5" id="opcao3" value="Não">
+                            <input class="form-check-input" type="radio" name="pergunta5" id="opcao3" value="Não tenho">
                             <label class="form-check-label" for="opcao2">Não tenho</label>
                         </div>
                     </div>
                 </div>
                 <div class="acoes">
                     <button class="btn btn-secondary prev" type="button" onclick="prevStep(5)">VOLTAR</button>
-                    <button class="btn btn-primary next" type="button" onclick="nextStep(5)">CONTINUAR</button>
-                </div>
-            </div>
-
-            <!-- Etapa 3 -->
-            <div class="step d-none" id="step6">
-                <div class="mb-3 campos">
-                    <label class="pergunta" for="campo3">Você dirige?</label>
-                    <input type="text" class="form-control" id="campo3" name="campo3" required>
-                </div>
-                <div class="acoes">
-                    <button class="btn btn-secondary prev" type="button" onclick="prevStep(6)">VOLTAR</button>
                     <button class="btn btn-primary next" type="submit">ENVIAR</button>
                 </div>
             </div>
         </form>
+        <div class="mensagemErro">
+            <span class="mensagem d-none" id="mensagem"></span>
+        </div>
+
+        <div class="row mt-3">
+            <div class="d-flex flex-column align-items-center">
+                <img src="./img/LogoFreedom SaúdeBRANCA.png" class="img-fluid logoFreedom" width="20%">
+            </div>
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
